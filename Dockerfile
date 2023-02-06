@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-#WORKDIR /home/app 
 RUN  apt-get update
 RUN  apt-get install default-jdk -y
 RUN  apt-get install tomcat9 -y
