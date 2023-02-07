@@ -9,4 +9,4 @@ RUN  git clone https://github.com/Ullubiy/First-build.git
 RUN  mvn package --f /First-build/pom.xml
 RUN cp /First-build/target/hello-1.0.war /var/lib/tomcat9/webapps/hello-1.0.war
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD ["/var/lib/docker/overlay2/8b3b6257d61fa61b8f2d4eb89863f9481affda6af62fc2a95e4cbec987e7c3f5/diff/usr/share/tomcat9/bin/catalina.sh", "run"]
