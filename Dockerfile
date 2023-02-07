@@ -2,7 +2,7 @@ FROM ubuntu:latest
 #WORKDIR /home/app 
 RUN  apt-get update
 RUN  apt-get install default-jdk -y
-RUN  apt-get install tomcat9 -y
+RUN  wget -c https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz -y
 RUN  apt-get install maven -y
 RUN  apt-get install git -y
 RUN  git clone https://github.com/Ullubiy/First-build.git
