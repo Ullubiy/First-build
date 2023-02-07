@@ -4,7 +4,7 @@ RUN  apt-get update
 RUN  apt-get install default-jdk -y
 RUN  apt install wget -y
 RUN  wget -c https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz 
-RUN  tar -xvf apache-tomcat-9.0.71.tar.gz  bin/tomcat9
+RUN  tar -xf apache-tomcat-9.0.71.tar.gz  /var/lib/tomcat9/
 RUN  apt-get install maven -y
 RUN  apt-get install git -y
 RUN  mvn package --f /First-build/pom.xml
