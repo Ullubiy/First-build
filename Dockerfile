@@ -3,8 +3,9 @@ FROM ubuntu:latest
 RUN  apt-get update
 RUN  apt-get install default-jdk -y
 RUN  apt install wget -y
-RUN  wget -c https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz 
-RUN  tar -xf apache-tomcat-9.0.71.tar.gz  /opt
+RUN  wget -c https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz /opt
+RUN  gunzip apache-tomcat-9.0.71.tar.gz
+RUN  tar -xf apache-tomcat-9.0.71.tar 
 RUN  apt-get install maven -y
 RUN  apt-get install git -y
 RUN  mvn package --f /First-build/pom.xml
