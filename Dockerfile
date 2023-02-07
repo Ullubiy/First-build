@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-#WORKDIR /home/app 
+WORKDIR /opt
 RUN  apt-get update
 RUN  apt-get install default-jdk -y
 RUN  apt install wget -y
