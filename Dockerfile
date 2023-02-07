@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN  apt-get update
 RUN  apt-get install default-jdk -y
 RUN  apt install wget -y
-RUN  wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz /opt
+RUN  wget -P opt/ https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz 
 RUN  gunzip apache-tomcat-9.0.71.tar.gz
 RUN  tar -xvf apache-tomcat-9.0.71.tar 
 RUN  apt-get install maven -y
