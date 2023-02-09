@@ -1,10 +1,16 @@
 version: '3.8'
 services:
-web:
-    depends_on:
-      - db
-    image: tomcat
-    volumes:
-      - ./target/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war
-    ports:
-      - '8082:8080'
+  web:
+    build:
+      image: tomcat
+      container_name: myapp
+      volumes:
+        - ./wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
+        - ./target/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war
+        - ./git clone https://github.com/Ullubiy/First-build.git
+      ports:
+        - '8080:8080'
+      restart:
+        unless-stopped
+    deploy:
+      image: alpine
