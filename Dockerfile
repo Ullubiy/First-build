@@ -18,7 +18,7 @@ RUN  git clone https://github.com/Ullubiy/First-build.git
 RUN  mvn package --f /opt/First-build/pom.xml
 RUN  pwd
 RUN  ls
-RUN service apache-tomcat-9.0.71 start
+RUN service tomcat-9.0.71 start
 RUN cp -avr First-build/target/hello-1.war  apache-tomcat-9.0.71/webapps/
 RUN chmod +x hello-1.war
 RUN ls apache-tomcat-9.0.71/webapps/
