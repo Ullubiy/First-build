@@ -19,11 +19,11 @@ RUN  mvn package --f /opt/First-build/pom.xml
 RUN  pwd
 RUN  ls
 #RUN service tomcat-9.0.71 start
-RUN cp -avr First-build/target/hello-1.war  apache-tomcat-9.0.71/webapps/
+COPY First-build/target/hello-1.0.war  apache-tomcat-9.0.71/webapps/
+#RUN cp -avr First-build/target/hello-1.war  apache-tomcat-9.0.71/webapps/
 RUN  pwd
 RUN  ls
 RUN chmod +x hello-1.war
 RUN ls apache-tomcat-9.0.71/webapps/
-#COPY First-build/target/hello-1.0.war  apache-tomcat-9.0.71/webapps/
 EXPOSE 8080
 CMD ["/opt/apache-tomcat-9.0.71/bin/catalina.sh", "run"]
