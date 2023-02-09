@@ -24,6 +24,6 @@ RUN  pwd
 RUN  ls
 #RUN chmod +x hello-1.0.war
 RUN ls apache-tomcat-9.0.71/webapps/
-RUN  /opt/tomcat/tomcat-9/v9.0.71/bin/startup.bat 
+RUN  apache-tomcat-9.0.71/bin/startup.bat 
 EXPOSE 8080
 CMD ["/opt/apache-tomcat-9.0.71/bin/catalina.sh", "run"]
