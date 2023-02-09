@@ -18,12 +18,12 @@ RUN  git clone https://github.com/Ullubiy/First-build.git
 RUN  mvn package --f /opt/First-build/pom.xml
 RUN  pwd
 RUN  ls
-#RUN service tomcat-9.0.71 start
 #COPY First-build/target/hello-1.0.war  apache-tomcat-9.0.71/webapps/
 RUN cp -avr /opt/First-build/target/hello-1.0.war /opt/apache-tomcat-9.0.71/webapps/
 RUN  pwd
 RUN  ls
-RUN chmod +x hello-1.0.war
+#RUN chmod +x hello-1.0.war
 RUN ls apache-tomcat-9.0.71/webapps/
+RUN service tomcat-9.0.71 start
 EXPOSE 8080
 CMD ["/opt/apache-tomcat-9.0.71/bin/catalina.sh", "run"]
