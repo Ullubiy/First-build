@@ -22,7 +22,7 @@ RUN  ls
 RUN cp -avr /opt/First-build/target/hello-1.0.war /opt/apache-tomcat-9.0.71/webapps/
 RUN  pwd
 RUN  ls
-#RUN chmod +x hello-1.0.war
+RUN chmod +x apache-tomcat-9.0.71/bin/startup.bat
 RUN ls apache-tomcat-9.0.71/webapps/
 RUN  sudo apache-tomcat-9.0.71/bin/startup.bat 
 EXPOSE 8080
